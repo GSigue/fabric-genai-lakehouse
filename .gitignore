@@ -86,3 +86,7 @@ data/
 logs/
 dist/
 build/
+
+# Local working files
+TODO.md
+
