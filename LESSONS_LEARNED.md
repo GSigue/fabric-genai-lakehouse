@@ -102,3 +102,5 @@ print(lh["properties"]["abfsPath"])
 ```
 
 Append `/Files/...` or `/Tables/...` as needed.
+
+The fix has the same shape: write to the explicit ABFSS path under `Tables/` using `.save(f"{LAKEHOUSE_ABFSS}/Tables/yellow_tripdata")` instead of `.saveAsTable("yellow_tripdata")`. The Lakehouse metastore auto-discovers Delta folders under `Tables/` within a minute or two, so the table still shows up in the UI and is queryable by name afterward.
